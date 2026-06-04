@@ -74,7 +74,7 @@ data/
 
 ## Training and Rendering
 
-You can run `train.sh` to train and render a scene with:
+Train a scene with:
 
 ```bash
 python train.py -s ./data/scene_name -m ./output/scene_name --eval
