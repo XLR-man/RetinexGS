@@ -72,15 +72,13 @@ data/
         points3D.bin
 ```
 
-## Training
+## Training and Rendering
 
-Train a scene with:
+You can run `train.sh` to train and render a scene with:
 
 ```bash
 python train.py -s ./data/scene_name -m ./output/scene_name --eval
 ```
-
-## Rendering
 
 Render the trained model with:
 
@@ -90,15 +88,13 @@ python render.py -m ./output/scene_name
 
 The script saves rendered results, reflection, illumination, enhanced color, ground truth views, and depth visualizations under the model output directory.
 
-## Demo Script
-
-You can edit `demo.sh` to set dataset and output paths:
+You can also edit `train.sh` to set dataset/output paths and run training followed by rendering:
 
 ```bash
-bash demo.sh
+bash train.sh
 ```
 
-Make sure the paths in `demo.sh` match your local dataset location.
+Make sure the paths in `train.sh` match your local dataset location.
 
 ## Outputs
 
@@ -137,8 +133,9 @@ If you find this project useful, please consider citing:
 
 This codebase builds upon the following excellent projects:
 
-- 3D Gaussian Splatting by GraphDECO-INRIA.
-- GauStudio and its customized differentiable Gaussian rasterizer.
-- tiny-cuda-nn for efficient hash-grid encoding.
+- [3D Gaussian Splatting](https://github.com/graphdeco-inria/gaussian-splatting) by GraphDECO-INRIA.
+- [GauStudio](https://github.com/GAP-LAB-CUHK-SZ/gaustudio) and its customized differentiable Gaussian rasterizer.
+- [simple-knn](https://gitlab.inria.fr/bkerbl/simple-knn) from the original 3DGS implementation.
+- [tiny-cuda-nn](https://github.com/NVlabs/tiny-cuda-nn) for efficient hash-grid encoding.
 
 We thank the authors for releasing their code and tools.
